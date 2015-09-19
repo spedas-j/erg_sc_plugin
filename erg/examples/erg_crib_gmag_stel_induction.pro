@@ -15,8 +15,8 @@
 ;             erg-sc-core at st4a.stelab.nagoya-u.ac.jp
 ;
 ;   $LastChangedBy: miyasita $
-;   $LastChangedDate: 2011-02-10 00:03:59 +0900 (Thu, 10 Feb 2011) $
-;   $LastChangedRevision: 114 $
+;   $LastChangedDate: 2015-08-04 22:28:34 -0700 (Tue, 04 Aug 2015) $
+;   $LastChangedRevision: 298 $
 ;   $URL: http://gemsissc.stelab.nagoya-u.ac.jp/svn/ergsc/trunk/erg/examples/erg_crib_gmag_stel_induction.pro $
 ;-
 
@@ -80,6 +80,5 @@ endfor
 ;-----
 ; export to ASCII
 tplot_ascii, 'stel_induction_db_dt_msr'
-stop
 
 end

@@ -31,8 +31,8 @@
 ;             erg-sc-core at st4a.stelab.nagoya-u.ac.jp
 ;
 ;   $LastChangedBy: miyasita $
-;   $LastChangedDate: 2013-11-10 13:18:48 +0900 (Sun, 10 Nov 2013) $
-;   $LastChangedRevision: 273 $
+;   $LastChangedDate: 2015-08-04 22:28:34 -0700 (Tue, 04 Aug 2015) $
+;   $LastChangedRevision: 298 $
 ;   $URL: http://gemsissc.stelab.nagoya-u.ac.jp/svn/ergsc/trunk/erg/ground/geomag/erg_load_gmag_stel_induction.pro $
 ;-
 
@@ -56,7 +56,7 @@ site_code_all = strsplit( $
 
 ;--- check site codes
 if(n_elements(site) eq 0) then site='all'
-site_code = thm_check_valid_name(site, site_code_all, /ignore_case, /include_all)
+site_code = ssl_check_valid_name(site, site_code_all, /ignore_case, /include_all)
 
 if(site_code[0] eq '') then return
 print, site_code
