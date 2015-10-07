@@ -43,8 +43,8 @@
 ;
 ;
 ; $LastChangedBy: horit $
-; $LastChangedDate: 2015-01-16 14:53:00 +0900 (Fri, 16 Jan 2015) $
-; $LastChangedRevision: 288 $
+; $LastChangedDate: 2015-10-07 20:04:03 +0900 (Wed, 07 Oct 2015) $
+; $LastChangedRevision: 300 $
 ; $URL: http://gemsissc.stelab.nagoya-u.ac.jp/svn/ergsc/trunk/erg/ground/radar/superdarn/erg_load_sdfit.pro $
 ;-
 ;---------------------------------------------------
@@ -93,7 +93,7 @@ PRO erg_load_sdfit, sites=sites, cdffn=cdffn, $
     endif
 
     ;Check the site name
-    stns = thm_check_valid_name( sites, valid_sites, /ignore_case, /include_all )
+    stns = ssl_check_valid_name( sites, valid_sites, /ignore_case, /include_all )
     if strlen(stns[0]) eq 0 then begin
       print, 'No valid radar name in sites!'
       print, 'Data currently available: ',valid_sites
