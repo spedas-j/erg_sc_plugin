@@ -21,12 +21,12 @@
 ; 	2011/01/11: Created
 ;
 ; $LastChangedBy: horit $
-; $LastChangedDate: 2015-01-16 14:53:00 +0900 (Fri, 16 Jan 2015) $
-; $LastChangedRevision: 288 $
+; $LastChangedDate: 2016-05-11 14:23:12 +0900 (Wed, 11 May 2016) $
+; $LastChangedRevision: 336 $
 ; $URL: http://gemsissc.stelab.nagoya-u.ac.jp/svn/ergsc/trunk/erg/ground/radar/superdarn/sd_latlt_grid.pro $
 ;-
 PRO sd_latlt_grid, dlat=dlat, dlt=dlt, color=color, linethick=linethick, $
-  twohourmltgrid=twohourmltgrid 
+  twohourmltgrid=twohourmltgrid, whitebgk=whitebgk 
     
   ;Initialize the SD plot environment
   sd_init
@@ -35,8 +35,9 @@ PRO sd_latlt_grid, dlat=dlat, dlt=dlt, color=color, linethick=linethick, $
   if ~keyword_set(dlt) then dlt = 1. 
   if keyword_set(twohourmltgrid) then dlt = 2. 
   
-  map_grid, latdel=dlat, londel=15.*dlt, color=color, glinethick=linethick  
-  
+  if keyword_set(whitebgk) then map_grid, latdel=dlat, londel=15.*dlt, color=255, glinethick=linethick*1.4  
+  map_grid, latdel=dlat, londel=15.*dlt, color=color, glinethick=linethick
+
   
   
   RETURN
