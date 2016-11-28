@@ -29,10 +29,10 @@
 ; :Author:
 ;   Tomo Hori (E-mail: horit at stelab.nagoya-u.ac.jp)
 ;
-; $LastChangedBy: horit $
-; $LastChangedDate: 2014-01-17 02:48:47 +0900 (Fri, 17 Jan 2014) $
-; $LastChangedRevision: 274 $
-; $URL: http://gemsissc.stelab.nagoya-u.ac.jp/svn/ergsc/trunk/erg/ground/radar/superdarn/get_sd_vlshell.pro $
+; $LastChangedBy:$
+; $LastChangedDate:$
+; $LastChangedRevision:$
+; $URL:$
 ;-
 PRO get_sd_vlshell, vlos_vn, angle_var=angle_var, exclude_angle=exclude_angle, glatp=glatp,glonp=glonp,glatm=glatm,glonm=glonm, $
   vmag=vmag

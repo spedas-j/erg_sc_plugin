@@ -25,10 +25,10 @@
 ; :HISTORY:
 ; 	2011/01/07: Created
 ;
-; $LastChangedBy: horit $
-; $LastChangedDate: 2011-01-13 16:53:19 +0900 (Thu, 13 Jan 2011) $
-; $LastChangedRevision: 98 $
-; $URL: http://gemsissc.stelab.nagoya-u.ac.jp/svn/ergsc/trunk/erg/ground/radar/superdarn/get_sphcntr.pro $
+; $LastChangedBy: $
+; $LastChangedDate: $
+; $LastChangedRevision: $
+; $URL: $
 ;-
 FUNCTION get_sphcntr, latarr, lonarr
 

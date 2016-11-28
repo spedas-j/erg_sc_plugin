@@ -22,10 +22,10 @@
 ; :HISTORY:
 ; 	2011/06/22: Created
 ;
-; $LastChangedBy: horit $
-; $LastChangedDate: 2012-01-15 10:48:23 +0900 (Sun, 15 Jan 2012) $
-; $LastChangedRevision: 166 $
-; $URL: http://gemsissc.stelab.nagoya-u.ac.jp/svn/ergsc/trunk/erg/ground/radar/superdarn/get_fixed_pixel_graph.pro $
+; $LastChangedBy: $
+; $LastChangedDate: $
+; $LastChangedRevision: $
+; $URL: $
 ;-
 PRO get_fixed_pixel_graph, vn, beam=beam, range_gate=rgate, newvn=newvn
   

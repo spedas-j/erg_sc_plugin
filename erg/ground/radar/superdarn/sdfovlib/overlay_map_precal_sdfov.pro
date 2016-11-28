@@ -1,10 +1,11 @@
 PRO overlay_map_precal_sdfov, site=site, geo_plot=geo_plot, nh=nh, sh=sh, $
   linethick=linethick, $
   fill=fill, $
-  color=color 
+  color=color, $
+  force_nhemis=force_nhemis 
   
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  nh_list = strsplit('bks cve cvw ekb fhe fhw gbr han hok hkw inv kap kod ksr pgr pyk rkn sas sto wal ade adw', /ext )
+  nh_list = strsplit('bks cve cvw ekb fhe fhw gbr han hok hkw inv kap kod ksr lyr pgr pyk rkn sas sto wal ade adw', /ext )
   sh_list = strsplit('bpk dce fir hal ker mcm san sps sye sys tig unw zho', /ext )
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   
@@ -49,7 +50,7 @@ PRO overlay_map_precal_sdfov, site=site, geo_plot=geo_plot, nh=nh, sh=sh, $
     glons = [ sdfovtbl.glon[0:bm,0], reform(sdfovtbl.glon[bm,0:rg]), $
       reverse(sdfovtbl.glon[0:bm,rg]), reverse(reform(sdfovtbl.glon[0,0:rg])) ]
     
-    if keyword_set(geo_plot) then begin
+    if keyword_set(geo_plot) or !map2d.coord eq 0 then begin
       lats = glats & lons = glons 
     endif else begin
       ;AACGM conversion
@@ -59,6 +60,9 @@ PRO overlay_map_precal_sdfov, site=site, geo_plot=geo_plot, nh=nh, sh=sh, $
       yrsecs = long( glats) & yrsecs[*] = yrsec
       mlts = aacgmmlt( years, yrsecs,  (mlons+360.) mod 360  )
       
+      ;Project the fov to the northern hemisphere if force_nhemis is set.
+      if keyword_set(force_nhemis) then mlats = abs( mlats ) 
+       
       lats = mlats & lons = mlts /24. * 360.
     endelse
     

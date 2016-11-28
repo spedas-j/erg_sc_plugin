@@ -20,10 +20,10 @@
 ; :Author:
 ;   Tomo Hori (E-mail: horit at stelab.nagoya-u.ac.jp)
 ;
-; $LastChangedBy: horit $
-; $LastChangedDate: 2014-01-17 02:48:47 +0900 (Fri, 17 Jan 2014) $
-; $LastChangedRevision: 274 $
-; $URL: http://gemsissc.stelab.nagoya-u.ac.jp/svn/ergsc/trunk/erg/ground/radar/superdarn/get_sd_glondir.pro $
+; $LastChangedBy:$
+; $LastChangedDate:$
+; $LastChangedRevision:$
+; $URL:$
 ;-
 PRO get_sd_glondir, vlos_vn
 

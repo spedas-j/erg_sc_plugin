@@ -15,10 +15,10 @@
 ;   2010/03/10: Created
 ;   2014/08/12: Major changes to move on to the new "map2d" environment 
 ;   
-; $LastChangedBy: horit $
-; $LastChangedDate: 2015-01-16 14:53:00 +0900 (Fri, 16 Jan 2015) $
-; $LastChangedRevision: 288 $
-; $URL: http://gemsissc.stelab.nagoya-u.ac.jp/svn/ergsc/trunk/erg/ground/radar/superdarn/sd_init.pro $
+; $LastChangedBy: c0004hori $
+; $LastChangedDate: 2016-11-23 03:24:51 +0900 (Wed, 23 Nov 2016) $
+; $LastChangedRevision: 364 $
+; $URL: https://ergsc-local.isee.nagoya-u.ac.jp/svn/ergsc/trunk/erg/ground/radar/superdarn/sd_init.pro $
 ;-
 pro sd_init, reset=reset
 
@@ -37,7 +37,7 @@ if (not keyword_set(exists)) or (keyword_set(reset)) then begin
       ,sd_polar: { $
                   charsize: 1.0 $
                 } $
-      ,remote_data_dir:'http://ergsc.stelab.nagoya-u.ac.jp/data/ergsc/ground/radar/sd/fitacf/' $
+      ,remote_data_dir:'http://ergsc.isee.nagoya-u.ac.jp/data/ergsc/ground/radar/sd/fitacf/' $
       , aacgm: { $
                   coefprefix:prefix $
                   , coefyrlist:yrlist $

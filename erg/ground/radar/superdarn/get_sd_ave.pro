@@ -24,10 +24,10 @@
 ; :HISTORY:
 ; 	2011/07/03: Created
 ;
-; $LastChangedBy: horit $
-; $LastChangedDate: 2014-01-17 02:48:47 +0900 (Fri, 17 Jan 2014) $
-; $LastChangedRevision: 274 $
-; $URL: http://gemsissc.stelab.nagoya-u.ac.jp/svn/ergsc/trunk/erg/ground/radar/superdarn/get_sd_ave.pro $
+; $LastChangedBy:$
+; $LastChangedDate:$
+; $LastChangedRevision:$
+; $URL:$
 ;-
 FUNCTION get_sd_ave, vn, latrng=latrng, lonrng=lonrng, maglat=maglat, new_vn=new_vn
   
